@@ -56,7 +56,35 @@ const SingleProductPage = () => {
   } = product;
   return (
     <Wrapper>
-      <PageHero title={name} />
+      <PageHero title={name} product />
+      <div className="section section-center page">
+        <Link className="btn" to="/products">
+          Back to products
+        </Link>
+        <div className="product-center">
+          <ProductImages />
+          <section className="content">
+            <h2>{name}</h2>
+            <Stars />
+            <h5 className="price">{formatPrice(price)}</h5>
+            <p className="description">{description}</p>
+            <p className="info">
+              <span>Available : </span>
+              {stock > 0 ? "In stock" : "Out of stock"}
+            </p>
+            <p className="info">
+              <span>SKU : </span>
+              {sku}
+            </p>
+            <p className="info">
+              <span>Brand : </span>
+              {company}
+            </p>
+            <hr />
+            {stock > 0 && <AddToCart />}
+          </section>
+        </div>
+      </div>
     </Wrapper>
   );
 };
