@@ -13,6 +13,9 @@ const ProductList = () => {
       </h5>
     );
   }
+  if (grid_view === false) {
+    return <ListView products={products} />;
+  }
   return <GridView products={products}>product list</GridView>;
 };
 
