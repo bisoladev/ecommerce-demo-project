@@ -8,11 +8,11 @@ const ProductsPage = () => {
       <PageHero title="products" />
       <Wrapper className="page">
         <div className="section-center products">
-          <Filters />
-        </div>
-        <div>
-          <Sort />
-          <ProductList />
+          <Filters />{" "}
+          <div>
+            <Sort />
+            <ProductList />
+          </div>
         </div>
       </Wrapper>
     </main>
