@@ -13,6 +13,9 @@ const Footer = () => {
 };
 
 const Wrapper = styled.footer`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   height: 5rem;
   display: flex;
   flex-direction: column;
